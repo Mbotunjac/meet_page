@@ -1,39 +1,158 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
 
 body{
-    background-color: hsl(0, 0%, 98%);
+    margin: 0;
+    padding: 0;
+    background-color:#FAFAFA;
     font-family: 'Red Hat Display', sans-serif;
     font-weight: 500;
-    line-height: 1.625rem;
-    color: #86869c;
-
-
+    color: #87879D;
 }
 
-header{
-position: relative;
-width: 1504px;
-height: 358px;
-left: -32px;
-top: 169px;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items:flex-start;
-min-height: 100vh;
-overflow: hidden;
+header {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
+header .meet-logo {
+    position: relative;
+    width: 119px;
+    height: 28px;
+    margin: 80px auto 60px;
+}
 
-header.meet-logo{
-position: absolute;
-width: 119px;
-height: 28px;
-left: 661px;
-top: 80px;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items:center;
-overflow: hidden;
+header .hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+header .hero .item {
+  display: block;
+  flex-grow: 2;
+  text-align: center;
+  min-height: 358px;
+}
+
+header .hero .item.hero-left {
+  order: 1;
+  background: url(images/desktop/image-hero-left.png) no-repeat right top;
+}
+
+header .hero .item.hero-right {
+  order: 3;
+  background: url(images/desktop/image-hero-right.png) no-repeat left top;
+}
+
+header .hero .item.hero-center {
+  order: 2;
+  flex-grow: 1;
+}
+
+header h1 {
+  margin: 50px auto 20px;
+  color: #28283D;
+  width: 80%;
+  max-width: 445px;
+  font-weight: 900;
+  font-size: 64px;
+  text-align: center;
+}
+
+header p {
+  margin: 10px auto 30px;
+  width: 90%;
+  max-width: 540px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+
+header a.button {
+  display: block;
+  padding: 0 30px;
+  height: 58px;
+  color: white;
+  font-size: 16px;
+  line-height: 58px;
+  text-decoration: none;
+  border-radius: 29px;
+  font-weight: 900;
+}
+
+header a.button.download {
+  background: #4D96A9;
+}
+
+header a.button.download:hover{
+  background: #71C0D4;
+}
+
+header a.button.download .version{
+  color: #8FE3F9;
+}
+
+header a.button.info {
+  background: #855FB1;
+}
+
+header a.button.info:hover{
+  background: #B18BDD;
+}
+
+header .flex-buttons {
+  width: 445px;
+  margin: 10px auto;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+@media only screen and (max-width: 1023px) {
+  header .meet-logo {
+    margin: 48px auto 48px;
+  }
+
+  header .hero {
+    gap: 30px;
+  }
+
+  header .hero .item {
+    min-height: 310px;
+  }
+
+  header .hero .item.hero-right {
+    order: 2;
+  }
+
+  header .hero .item.hero-center {
+    order: 3;
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 48px;
+  }
+
+  header p {
+    max-width: 458px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  header .hero .item.item.hero-left,
+  header .hero .item.item.hero-right {
+    background-size: 220px 160px;
+    min-height: 160px;
+  }
 }
