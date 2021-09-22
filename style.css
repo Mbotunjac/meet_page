@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap');
 
 body{
     margin: 0;
@@ -60,6 +60,7 @@ header h1 {
   font-weight: 900;
   font-size: 64px;
   text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 header p {
@@ -155,4 +156,167 @@ header .flex-buttons {
     background-size: 220px 160px;
     min-height: 160px;
   }
+}
+
+main{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+.line{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  position: relative;
+  border-left: 1px solid;
+  height: 84px;
+  left: 50%;
+  right: 50%;
+  
+  margin: 110 auto 0; 
+  opacity: 0.25;
+}
+
+.section-nummber{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  width: 56px;
+  border: 1px solid;
+  border-radius: 29px;
+  margin: auto;
+  opacity: 0.25;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+main .images-container{
+  position: relative;
+  max-width: 1110px;
+  max-height: 242px;
+
+/*  margin-left: auto;
+  margin-right: auto; */
+  
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: auto;
+  overflow: hidden;
+  /*flex-shrink: 2; */
+}
+
+main .images-container .image{
+  width: 255px;
+  height: 242px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+article{
+  position: relative;
+  margin: 80px auto 111px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+article span{
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4D96A9;
+}
+
+article h2{ 
+  position: relative;
+  max-width: 445px;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 44px;
+  color: #28283D;
+  margin: 16px auto 32px;
+
+}
+
+article p{
+  max-width: 540px;
+  font-size: 18px;
+  line-height: 26px;
+  margin: auto;
+}
+
+footer{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  background-size: cover; 
+  background: #4D96A9;
+  margin-top: 184px;
+  padding-bottom: 0px;
+}
+
+footer::before{
+  content: ' '; 
+ /*display: block; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.1;
+  background-image: url(/images/desktop/image-footer.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+#section-nummber{
+    background: white;
+    color: gray;
+    padding: 1rem 1rem;
+    transform: translateY(-7.5rem);
+  /* position: relative;
+  margin: 72px auto -28px; 
+  bottom: -30px;
+  background-color: #FAFAFA; */
+}
+
+.footer-container{
+  position:relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  margin: 116px 165px 165px 104px;
+}
+
+h3{
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 44px;
+  color: #FAFAFA;
+}
+
+footer .p{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #FAFAFA;
 }
