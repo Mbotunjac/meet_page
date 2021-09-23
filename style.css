@@ -110,6 +110,7 @@ header .flex-buttons {
   margin: 10px auto;
   justify-content: space-evenly;
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -157,6 +158,14 @@ header .flex-buttons {
     min-height: 160px;
   }
 }
+@media only screen and (max-width: 400px) {
+  header .flex-buttons {
+    max-width: 193px;
+    margin: 10px auto;
+    gap: 16px;
+  }
+  
+}
 
 main {
   display: block;
@@ -164,7 +173,6 @@ main {
   overflow: hidden;
   width: 100%;
 }
-
 
 .line {
   display: flex;
@@ -182,7 +190,7 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   height: 56px;
   width: 56px;
   border: 1px solid rgba(135, 135, 157, 0.25);
@@ -195,28 +203,33 @@ main {
 main .images-container {
   position: relative;
   max-width: 1110px;
-  max-height: 242px;
-
-/*  margin-left: auto;
-  margin-right: auto; */
-  
+  width: 90%;
   display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
+  justify-content: center; 
   flex-wrap: wrap;
-  margin: auto;
+  margin: auto; 
   overflow: hidden;
-  margin-top: 64px;
-  /*flex-shrink: 2; */
+  margin-top: 64px; 
+  gap: 4%;
 }
 
-main .images-container .image {
-  width: 255px;
-  height: 242px;
+.images-container img {
+  position: relative;
+  display: block;
+  width: 22%;
   border-radius: 8px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+} 
+
+@media only screen and (max-width: 400px) {
+  main .images-container{
+   gap: 11px;
+  } 
+ 
+  .images-container img {
+   width: 48%;
+  }
+} 
+
 article {
   position: relative;
   margin: 80px auto 111px;
@@ -253,10 +266,32 @@ article p {
   margin: auto;
 }
 
+@media only screen and (max-width: 768px) {
+  article {
+    max-width: 540px;
+  }
+
+  article p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  article {
+    max-width: 327px;
+  }
+
+  article h2{
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
 footer {
   position: relative;
   display: block;
   overflow: hidden;
+  /*max-height: 308px; */
   width: 100%;
   background-size: cover; 
   background: #4D96A9;
@@ -283,7 +318,20 @@ footer::before {
   background-size: cover;
 }
 
+@media only screen and (max-width: 768px) {
+  footer::before {
+    background-image: url(/images/tablet/image-footer.jpg);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  footer::before {
+    background-image: url(/images/mobile/image-footer.jpg);
+  }
+}
+
 footer .line{
+  position: relative;
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -298,12 +346,11 @@ footer .line{
   box-sizing: border-box;
 }
 
-
 footer .section-nummber {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+ justify-content: center;
+  align-items: center; 
   height: 56px;
   width: 56px;
   border: 1px solid rgba(135, 135, 157, 0.25);
@@ -316,13 +363,14 @@ footer .section-nummber {
 }
 
 .footer-container {
-  position:relative;
-  display: flex;
- /* flex-direction: row; */
-  flex-wrap: wrap;
+  position: relative;
+  display: flex; 
+  flex-wrap: wrap; 
   justify-content: space-evenly;
-  width: 100%;
- /* margin: 116px auto 104px; */
+  max-width: 1110px;
+ /* max-height: 88px; */
+ /* margin: auto; */
+  margin: 116px auto 104px; 
   z-index: 2; 
 }
 
@@ -332,7 +380,7 @@ h3 {
   font-size: 40px;
   line-height: 44px;
   color: #FAFAFA;
-  margin: 116px auto 104px; 
+  /*margin: 116px auto 104px; */
 }
 
 footer p {
@@ -341,8 +389,8 @@ footer p {
   font-size: 18px;
   line-height: 26px;
   color: #FAFAFA;
-  margin-left: 116px;
-  margin: 116px auto 114px; 
+ /* margin-left: 116px; */
+ /* margin: 116px auto 114px; */
 }
 
 footer a.download {
@@ -358,10 +406,8 @@ footer a.download {
   background: #855FB1;
   /*margin-left: 92px; */
   /*margin-right: 165px; */
-  /*margin: 131px auto 119px; */
+ /* margin: 131px auto 119px; */
 }
-
-
 
 footer a.download:hover {
   background: #B18BDD;
@@ -369,4 +415,37 @@ footer a.download:hover {
 
 footer a.download .version {
   color: #D9B8FF;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-container{
+    max-height: 428px;
+  }
+
+  h3 {
+    max-width: 457px;
+    text-align: center;
+  }
+
+  footer p{
+    max-width: 573px;
+    text-align: center;
+  }
+
+  footer a.download{
+    width: 193px; 
+    margin: 40px auto 66px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h3{
+    max-width: 327px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  footer p{
+    max-width: 327px;
+  }
 }
